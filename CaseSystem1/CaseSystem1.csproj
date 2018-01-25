@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF642743-9C6A-483C-BC28-61637F48045E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CaseSystem1</RootNamespace>
+    <AssemblyName>CaseSystem1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRelation.Designer.cs">
+      <DependentUpon>AddRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attribute.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AttributeToEntity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttributeToEntity.Designer.cs">
+      <DependentUpon>AttributeToEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttributeValue.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CaseModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaseModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeAttribute.Designer.cs">
+      <DependentUpon>ChangeAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Condition.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ControlElement.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseProject.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityAdding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntityAdding.Designer.cs">
+      <DependentUpon>EntityAdding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forma.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdding.Designer.cs">
+      <DependentUpon>FormAdding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOpening.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOpening.Designer.cs">
+      <DependentUpon>FormOpening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrEntityView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrEntityView.Designer.cs">
+      <DependentUpon>FrEntityView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrMain.Designer.cs">
+      <DependentUpon>FrMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrProjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrProjects.Designer.cs">
+      <DependentUpon>FrProjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectAdding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectAdding.Designer.cs">
+      <DependentUpon>ProjectAdding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionAdding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionAdding.Designer.cs">
+      <DependentUpon>QuestionAdding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionViewing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionViewing.Designer.cs">
+      <DependentUpon>QuestionViewing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relation.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportAdding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportAdding.Designer.cs">
+      <DependentUpon>ReportAdding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeControlElement.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeEvent.cs">
+      <DependentUpon>CaseModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddRelation.resx">
+      <DependentUpon>AddRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttributeToEntity.resx">
+      <DependentUpon>AttributeToEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeAttribute.resx">
+      <DependentUpon>ChangeAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntityAdding.resx">
+      <DependentUpon>EntityAdding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdding.resx">
+      <DependentUpon>FormAdding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOpening.resx">
+      <DependentUpon>FormOpening.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrEntityView.resx">
+      <DependentUpon>FrEntityView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrMain.resx">
+      <DependentUpon>FrMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrProjects.resx">
+      <DependentUpon>FrProjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenRelation.resx">
+      <DependentUpon>OpenRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectAdding.resx">
+      <DependentUpon>ProjectAdding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QuestionAdding.resx">
+      <DependentUpon>QuestionAdding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionViewing.resx">
+      <DependentUpon>QuestionViewing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAdding.resx">
+      <DependentUpon>ReportAdding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="CaseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CaseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CaseModel.edmx.diagram">
+      <DependentUpon>CaseModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CaseModel.Context.cs</LastGenOutput>
+      <DependentUpon>CaseModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="CaseModel.edmx.sql" />
+    <Content Include="CaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CaseModel.cs</LastGenOutput>
+      <DependentUpon>CaseModel.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
